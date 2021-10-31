@@ -33,8 +33,19 @@ ul {
     margin-bottom: 0px;
     padding: 0px 0px 0px 0px;
 }
-
-
+.conteiner {
+ width: 1200px;
+ margin: 0px auto;
+ padding-left: 15px;
+ padding-right: 15px;
+}
+.section-tittle {
+font-weight: bold;
+font-size: 36px;
+line-height: 1.51;
+letter-spacing: 0.03em;
+color: var(--title-color);
+}
 /* top-line */
 
 .top-line {
@@ -50,41 +61,38 @@ ul {
 .logo-web {
    color: var(--hover-color);
 }
-.conteiner {
- width: 1200px;
- margin: 0px auto;
- padding-left: 15px;
- padding-right: 15px;
- 
-}
-
-/* top-line */
-
 .site-nav {
     display: flex;
     margin-left: 93px;
 }
-.site-nav li {
+.site-nav__list {
     position: relative;
 display: block;
 padding-top: 32px;
 padding-bottom: 32px;
 }
-.site-nav li:not(:last-child) {
+.site-nav__list:not(:last-child) {
     margin-right: 50px;
 }
 .adress-nav {
     display: flex;
     margin-left: auto;
 }
-.tel-icon {
+.adress-nav__list {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.adress-nav__list:not(:last-child) {
+    margin-right: 30px;
+}
+.adress-nav__tel-icon {
     margin-right: 10px;
 }
-.mail-icon {
+.adress-nav__mail-icon {
     margin-right: 10px;
 }
-.adress-nav li+li {
-    margin-left: 50px;
+.adress-nav__mail {
+margin-left: 50px;
 }
 .main-nav {
     display: flex;
@@ -112,10 +120,6 @@ color: var(--title-color);
 
 /* adress nav */
 
-.adress-link {
-    display: inline-block;
-    align-items: center;
-}
 .adress-nav a {
     font-family: Roboto;
 font-weight: 500;
@@ -145,7 +149,7 @@ fill: var(--additional-color);
     background-color: #2F303A;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/backgraund/img.jpg);
 }
-.section-hero-busines {
+.section-hero__tittle {
 font-family: Roboto;
 font-weight: 900;
 font-size: 44px;
@@ -153,7 +157,7 @@ line-height: 1.36;
 text-align: center;
 color: var(--brand-color);
 }
-.button {
+.section-hero__button {
  min-width: 200px;
 height: 50px;    
 background: var(--hover-color);
@@ -162,7 +166,7 @@ margin-top: 30px;
 border: none;
 border-radius: 4px;
 }
-.zakaz {
+.section-hero__button-text {
     font-family: Roboto;
     font-weight: bold;
     font-size: 16px;
@@ -175,25 +179,27 @@ border-radius: 4px;
 }
 
 /* quality */
-
-.quality-svg {
+.section-quality {
+    padding-top: 94px;
+}
+.section-quality__list {
+    display: flex;
+}
+.section-quality__item:not(:last-child) {
+    margin-right: 30px;
+}
+.section-quality__svg {
     width: 270px;
     height: 120px;
     background: #F5F4FA;
 border-radius: 4px;
 }
-.quality-icon {
+.section-quality__icon {
     margin-left: 100px;
     margin-bottom: 25px;
     margin-top: 25px;
 }
-.section-quality {
-    padding-top: 94px;
-}
-.section-quality ul {
-    display: flex;
-}
-.section-quality h3 {
+.section-quality__tittle {
 font-weight: bold;
 font-size: 14px;
 line-height: 1.14;
@@ -202,65 +208,77 @@ text-transform: uppercase;
 color: var(--title-color);
 margin-top: 30px;
 }
-.section-quality p {
+.section-quality__description {
 margin-top: 10px;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--additional-color);
 }
-.section-tittle {
-font-weight: bold;
-font-size: 36px;
-line-height: 1.51;
-letter-spacing: 0.03em;
-color: var(--title-color);
-}
-
-
-.section-quality-list li:not(:last-child) {
-    margin-right: 30px;
-}
 
 /* section-3 */
 
-.section-what-we-doing {
+.section-what-doing {
 padding-top: 94px;
 padding-bottom: 94px;
 }
-.section-what-we-doing ul {
+.section-what-doing__list {
     margin-top: 50px;
     display: flex;
 }
-.section-what-we-doing h2 {
+.section-what-doing__item:not(:last-child) {
+    margin-right: 30px;
+}
+.section-what-doing__item
+.section-what-doing .section-tittle {
     text-align: center;
 }
 
-.product:not(:last-child) {
-    margin-right: 30px;
-}
+
 
 /* comand */
-
-.comand-list {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.comand-cards:not(:last-child) {
-    margin-right: 30px;
-}
-
-.section-comand {
+.comand {
     background: #F5F4FA;
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.section-comand h2 {
-    text-align: center;
 
+.comand__cards {
+    background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 }
-.section-comand h3 {
+
+.comand__cards:not(:last-child) {
+    margin-right: 30px;
+}
+
+.comand__list {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.comand__master-social {
+        display: flex;
+        margin-top: 50px;
+}
+
+.comand__social-item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+.comand__social-item:last-child {
+margin-right: 0;
+}
+
+.comand h2 {
+    text-align: center;
+}
+
+.comand h3 {
 font-weight: 500;
 font-size: 16px;
 line-height: 1.18;
@@ -268,19 +286,9 @@ letter-spacing: 0.03em;
 color: var(--title-color);
 text-align: center;
 }
-.comand-ul {
-    display: flex;
-        margin-top: 50px;
-}
-.social-item {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-}
-.social-item:last-child {
-margin-right: 0;
-}
-.social-link {
+
+
+.comand_social-link {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
@@ -290,29 +298,29 @@ margin-right: 0;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link:hover,
-.social-link:focus {
+.comand__social-link:hover,
+.comand__social-link:focus {
     background-color: var(--hover-color);
     
 }
-.social-icon {
-    fill: #AFB1B8;
-}
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
+
+.comand__social-link:hover .comand__social-icon,
+.comand__social-link:focus .comand__social-icon {
     fill: #ffffff;
 }
 
-.master-social {
+
+.comand__social-icon {
+    fill: #AFB1B8;
+}
+
+
+.comand__master-social {
     display: flex;
     justify-content: center;
 }
-.comand-cards {
-    background: #FFFFFF;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
-}
-.section-comand p {
+
+.comand p {
     font-family: Roboto;
 font-size: 16px;
 line-height: 1.18;
